@@ -10,7 +10,9 @@
         "illuminate/container": "~5.1.0"
     },
     "autoload": {
-        "files": [],
+        "files": [
+            "src/Vitaminate/Foundation/helpers.php"
+        ],
         "psr-4": {
             "Vitaminate\\": "src/Vitaminate/"
         }
