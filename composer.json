@@ -1,27 +1,32 @@
 {
-    "name": "plugino/plugino",
-    "description": "The Core of Plugino Framework, the PHP Framework for WordPress Plugin development.",
+    "name": "vitaminframework/framework",
+    "description": "The Core of Vitamin Framework, the PHP Framework for WordPress development.",
     "keywords": ["wordpress-development","php", "framework","wordpress", "symfony"],
-    "homepage":"https://github.com/plugino/plugino",
+    "homepage":"https://github.com/vitaminframework/framework",
     "license":"MIT",
     "type": "library",
     "require": {
         "php": ">=5.5.9",
-        "symfony/dependency-injection": "^3.3",
-        "symfony/yaml": "^3.3",
-        "symfony/config": "^3.3"
+        "illuminate/container": "~5.1.0"
     },
     "autoload": {
+        "files": [],
         "psr-4": {
-            "Plugino\\Component\\HttpKernel\\": "src/Plugino/Component/HttpKernel/"
+            "Vitaminate\\": "src/Vitaminate/"
+        }
+    },
+    "autoload-dev": {
+        "files": [],
+        "psr-4": {
+            "Vitaminate\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "dev",
     "authors": [
         {
-            "name": "Emmanuel KWENE",
-            "email": "njume48@gmail.com",
-            "homepage": "http://mystro-ken.cm",
+            "name": "Mystro Ken",
+            "email": "mystroken@gmail.com",
+            "homepage": "http://mystroken.cm",
             "role": "Lead Developer"
         }
     ]
