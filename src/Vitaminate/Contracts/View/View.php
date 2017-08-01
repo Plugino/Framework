@@ -6,11 +6,19 @@ namespace Vitaminate\Contracts\View;
 interface View
 {
     /**
-     * Add a piece of data to the view.
+     * Load a template and returns the result as a string or echo it
      *
-     * @param  string|array  $key
-     * @param  mixed   $value
-     * @return $this
+     * throws RuntimeException if $templatePath . $template does not exist
+     *
+     * @param $template
+     * @param array $data
+     * @param boolean $echo
+     *
+     * @return mixed
+     *
+     * @throws \InvalidArgumentException
+     * @throws \RuntimeException
+     * @throws \Exception
      */
-    public function with($key, $value = null);
+    public function load($template, array $data = [], $echo = true);
 }
