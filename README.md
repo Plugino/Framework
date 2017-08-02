@@ -1,8 +1,8 @@
 # Vitamin Framework
 
-[![Build Status](https://travis-ci.org/mystroken/wordpruss.svg?branch=master)](https://travis-ci.org/mystroken/wordpruss)
-[![Total Downloads](https://poser.pugx.org/wordpruss/wordpruss/downloads)](https://packagist.org/packages/wordpruss/wordpruss)
-[![License](https://poser.pugx.org/wordpruss/wordpruss/license)](https://packagist.org/packages/wordpruss/wordpruss)
+[![Build Status](https://travis-ci.org/vitaminframework/framework.svg?branch=master)](https://travis-ci.org/vitaminframework/framework)
+[![Total Downloads](https://poser.pugx.org/vitaminframework/framework/downloads)](https://packagist.org/packages/vitaminframework/framework)
+[![License](https://poser.pugx.org/wordpruss/wordpruss/license)](https://packagist.org/packages/vitaminframework/framework)
 
 
 Vitamin Framework is a PHP Framework that aims to "vitaminate" the WordPress development.
