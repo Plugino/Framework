@@ -5,7 +5,6 @@ namespace Vitaminate\Foundation;
 use \Vitaminate\Contracts\Foundation\Application as ApplicationContract;
 use Illuminate\Container\Container;
 
-
 class Application extends Container implements ApplicationContract
 {
     /**
