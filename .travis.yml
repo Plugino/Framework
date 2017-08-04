@@ -4,8 +4,12 @@ php:
   - '5.6'
 
 before_script:
+  - mkdir -p build/logs
   - cp phpunit.xml.dist phpunit.xml
   - composer install
 
 script: 
-  - phpunit --configuration phpunit.xml
+  - phpunit -c ./ --coverage-text --coverage-clover build/logs/clover.xml
+
+after_script:
+  - php vendor/bin/coveralls -v
