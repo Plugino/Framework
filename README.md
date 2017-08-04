@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/vitaminframework/framework.svg?branch=master)](https://travis-ci.org/vitaminframework/framework)
 [![Total Downloads](https://poser.pugx.org/vitaminframework/framework/downloads)](https://packagist.org/packages/vitaminframework/framework)
+[![Coverage Status](https://coveralls.io/repos/github/vitaminframework/framework/badge.svg?branch=master)](https://coveralls.io/github/vitaminframework/framework?branch=master)
 [![License](https://poser.pugx.org/wordpruss/wordpruss/license)](https://packagist.org/packages/vitaminframework/framework)
 
 
