@@ -37,7 +37,7 @@ class RouteMatcher
         {
             $routePath = $route->getPath();
             $routeParameters = $route->getParameters();
-            $parametersMatch = array_intersect($routeParameters, $parameters)
+            $parametersMatch = array_intersect($routeParameters, $parameters);
 
             if( $path != $routePath ) continue;
             if( sizeof($parametersMatch) !== sizeof($routeParameters) ) continue;
