@@ -35,8 +35,8 @@ class RouteMatcher
          */
         foreach ($routeCollection->getRoutes() as $route)
         {
-            $routePath = $route->getPath();
-            $routeParameters = $route->getParameters();
+            $routePath = $route->getUrl()->getPath();
+            $routeParameters = $route->getUrl()->getParameters();
             $parametersMatch = array_intersect($routeParameters, $parameters);
 
             if( $path != $routePath ) continue;

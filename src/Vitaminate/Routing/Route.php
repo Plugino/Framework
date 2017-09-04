@@ -12,14 +12,9 @@ use Vitaminate\Routing\Exceptions\InvalidCallableException;
 class Route
 {
     /**
-     * @var string $path
+     * @var URL $url
      */
-    protected $path;
-
-    /**
-     * @var array $parameters
-     */
-    protected $parameters = [];
+    protected $url;
 
     /**
      * @var string $controller
@@ -33,11 +28,10 @@ class Route
      * @param string $controller
      * @param array $parameters
      */
-    public function __construct($path, $controller, $parameters)
+    public function __construct($path, $controller, array $parameters)
     {
-        $this->path = $path;
         $this->controller = $controller;
-        $this->parameters = (array) $parameters;
+        $this->url = new URL($path, $parameters);
     }
 
 
@@ -45,42 +39,6 @@ class Route
      * @var array
      */
     protected $actionArguments = [];
-
-    /**
-     * @return string
-     */
-    public function getPath()
-    {
-        return $this->path;
-    }
-
-    /**
-     * @param string $path
-     * @return self
-     */
-    public function setPath($path)
-    {
-        $this->path = $path;
-        return $this;
-    }
-
-    /**
-     * @return array
-     */
-    public function getParameters()
-    {
-        return $this->parameters;
-    }
-
-    /**
-     * @param array $parameters
-     * @return self
-     */
-    public function setParameters($parameters)
-    {
-        $this->parameters = $parameters;
-        return $this;
-    }
 
     /**
      * @return string
@@ -151,16 +109,11 @@ class Route
         throw new InvalidCallableException("The action of the route can't be called!");
     }
 
-    public function generateUrl()
+    /**
+     * @return URL
+     */
+    public function getUrl()
     {
-        $queryString = '?';
-        if(empty($this->parameters)) return site_url($this->path);
-
-        foreach ($this->parameters as $key => $value)
-        {
-            $queryString .= $key.'='.$value.'&';
-        }
-
-        return site_url($this->path) . trim($queryString, '&');
+        return $this->url;
     }
 }

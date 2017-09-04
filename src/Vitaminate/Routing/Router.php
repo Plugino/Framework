@@ -60,15 +60,19 @@ class Router
         return $route->runAction();
     }
 
+    /**
+     * @param $name
+     * @return URL
+     */
     public function generateUrl($name)
     {
-        $generatedUrl = '';
+        $generatedUrl = null;
 
         $route = $this->routeCollection->get($name);
 
         if(null !== $route)
         {
-            $generatedUrl = $route->generateUrl();
+            $generatedUrl = $route->getUrl();
         }
 
         return $generatedUrl;

@@ -23,7 +23,9 @@
         }
     },
     "autoload-dev": {
-        "files": [],
+        "files": [
+            "tests/resources/helpers.php"
+        ],
         "psr-4": {
             "Vitaminate\\Tests\\": "tests/"
         }
