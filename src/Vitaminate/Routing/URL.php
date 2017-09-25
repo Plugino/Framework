@@ -35,11 +35,13 @@ class URL
      * @return URL
      */
     public static function getInstance()
-    {
+    {/*
         if(is_null(static::$instance)){
             static::$instance = new URL();
         }
-        return static::$instance;
+    */
+        return new URL();
+        //return static::$instance;
     }
 
     /**
@@ -136,7 +138,10 @@ class URL
      */
     public function addParameter($key, $value)
     {
-        $this->parameters[$key] = $value;
+        if( !is_null($value) )
+        {
+            $this->parameters[$key] = $value;
+        }
         return $this;
     }
 

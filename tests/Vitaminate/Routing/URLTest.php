@@ -78,4 +78,10 @@ class URLTest extends TestCase
         $this->expectOutputString('?page=test&id=0&action=delete');
         echo URL::to('fake')->with(['id' => 0, 'action' => 'delete']);
     }
+
+    public function testCanIgnoreNullParametersAsArguments()
+    {
+        $this->expectOutputString('?page=test&id=0');
+        echo URL::to('fake')->with(['id' => 0, 'action' => null]);
+    }
 }
