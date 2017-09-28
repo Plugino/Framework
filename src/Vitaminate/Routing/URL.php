@@ -138,10 +138,13 @@ class URL
      */
     public function addParameter($key, $value)
     {
+        $this->removeParameter($key);
+
         if( !is_null($value) )
         {
             $this->parameters[$key] = $value;
         }
+
         return $this;
     }
 
